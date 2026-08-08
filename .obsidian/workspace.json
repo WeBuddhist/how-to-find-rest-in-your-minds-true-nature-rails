@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "1-SOURCES/References/ཐར་ལམ་རབ་གསལ།.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "ཐར་ལམ་རབ་གསལ།"
             }
           }
         ]
@@ -183,8 +183,8 @@
             "state": {
               "type": "claudian-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "claudian-view"
+              "icon": "bot",
+              "title": "Claudian"
             }
           }
         ],
@@ -192,7 +192,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 1017.5
+    "width": 959.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -203,15 +203,17 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "realclaudian:Open Claudian": false
     }
   },
-  "active": "d9fd9f2211bb0161",
+  "active": "d066ca5c15f520a5",
   "lastOpenFiles": [
+    "1-SOURCES/Text/bo-don-khrid-byang-chub-lam-bzang.md",
+    "1-SOURCES/References/ཐར་ལམ་རབ་གསལ།.md",
+    "README.md",
     "README.md.tmp.4048.a9b48391c9df",
     "1-SOURCES/Text/དོན་ཁྲིད་བྱང་ཆུབ་ལམ་བཟང་།.md",
-    "1-SOURCES/Text/bo-don-khrid-byang-chub-lam-bzang.md",
-    "README.md",
     "1-SOURCES/Text/Untitled.md",
     "1-SOURCES/Text/དོན་ཁྲིད་བྱང་ཆུབ་ལམ་བཟང་།.txt",
     "gemini-scribe/Scheduled-Tasks/Runs",
@@ -224,7 +226,6 @@
     "gemini-scribe/Prompts",
     "gemini-scribe",
     "CLAUDE.md",
-    "4-SYSTEM/Skills/json-to-commentary/scripts/converters/__pycache__/tipitaka_org_atthakatha.cpython-310.pyc",
     "4-SYSTEM/Skills/epub-to-markdown/converters/README.md",
     "4-SYSTEM/Skills/verse-context/SKILL.md",
     "4-SYSTEM/Skills/vault-audit/SKILL.md",
