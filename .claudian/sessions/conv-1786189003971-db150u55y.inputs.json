@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1786189003971-db150u55y",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786189004256-vguqqls",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1786189003963-551qyvj",
+      "timestamp": 1786189003963,
+      "rawDisplayText": "hello!",
+      "canonicalText": "hello!",
+      "context": {
+        "currentNote": {
+          "path": "README.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "2d0dcb42e68e853caa57a2fea9978ad68ab56241ad66e2d504a67b2db0f4a7ec",
+      "providerUserMessageId": "0339b8a7-63ed-4deb-8503-2689e6055b3e",
+      "providerAssistantMessageId": "419d0eb3-7829-4f4b-9902-39aba2278bee"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786189093884-jrlkqg6",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1786189093877-l1x27rn",
+      "timestamp": 1786189093877,
+      "rawDisplayText": "This repo is for the text called སེམས་ཉིད་ངལ་གསོའི་དོན་ཁྲིད།",
+      "canonicalText": "This repo is for the text called སེམས་ཉིད་ངལ་གསོའི་དོན་ཁྲིད།",
+      "images": [],
+      "contentDigest": "9d77043111d69b6ce935f812e878d3e135c92e60dda43fe7606ba6ebd68288a6",
+      "providerUserMessageId": "4c72a0e9-ffcc-4f71-885b-0eeaa506a035",
+      "providerAssistantMessageId": "2f6426ab-3876-4d64-889a-147e40154d3d"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786189331626-aro319w",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1786189331620-bstjt5q",
+      "timestamp": 1786189331620,
+      "rawDisplayText": "I just added the the root text. rename it according to the convention",
+      "canonicalText": "I just added the the root text. rename it according to the convention",
+      "images": [],
+      "contentDigest": "2cce6e579c090a4f53de26d52d9ff718292c1c6ca47402197eb545697223fd59",
+      "providerUserMessageId": "124aa58e-9773-4176-8a36-d9a828471c2c",
+      "providerAssistantMessageId": "83ee183e-3428-4d0a-b826-b77d76297da9"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786189433351-j347qf4",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1786189433345-lxcfpm9",
+      "timestamp": 1786189433345,
+      "rawDisplayText": "update the readme title",
+      "canonicalText": "update the readme title",
+      "images": [],
+      "contentDigest": "8de051b158f84b32c0126a0d70e91838c3e986228e8f382e066ac798699453c8",
+      "providerUserMessageId": "671c46e7-c157-45f1-bece-3579f881d8e9",
+      "providerAssistantMessageId": "3c001a14-7697-464c-90d9-cd1feb8c0617"
+    }
+  ]
+}

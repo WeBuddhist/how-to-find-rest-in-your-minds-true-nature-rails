@@ -1,4 +1,4 @@
-# [text-slug]-rails
+# resting-in-the-nature-of-the-mind-manual
 
 A collaborative [Obsidian](https://obsidian.md) vault that makes AI-powered work on a **classical text** reliable, traceable, and consistent at scale.
 
