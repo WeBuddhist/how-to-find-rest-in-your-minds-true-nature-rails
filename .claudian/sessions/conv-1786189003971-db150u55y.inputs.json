@@ -62,6 +62,19 @@
       "contentDigest": "8de051b158f84b32c0126a0d70e91838c3e986228e8f382e066ac798699453c8",
       "providerUserMessageId": "671c46e7-c157-45f1-bece-3579f881d8e9",
       "providerAssistantMessageId": "3c001a14-7697-464c-90d9-cd1feb8c0617"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786206139070-45ckc8w",
+      "userTurnOrdinal": 6,
+      "state": "accepted",
+      "localMessageId": "msg-1786206139051-213ob5s",
+      "timestamp": 1786206139051,
+      "rawDisplayText": "give me a table with the ཁྲིད་རྐང་ program from the text",
+      "canonicalText": "give me a table with the ཁྲིད་རྐང་ program from the text",
+      "images": [],
+      "contentDigest": "616da0cd075e8166b6a9c9851be1306f83fbeb3af54fc1844aa19cf320e91d66",
+      "providerUserMessageId": "fe5b6dfd-496f-4f59-880f-44118009e04f"
     }
   ]
 }

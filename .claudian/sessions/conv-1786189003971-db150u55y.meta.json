@@ -4,13 +4,14 @@
   "title": "Begin session",
   "titleGenerationStatus": "success",
   "createdAt": 1786189003978,
-  "lastActivityAt": 1786189451340,
-  "sessionId": null,
+  "lastActivityAt": 1786206139051,
+  "sessionId": "0b908d14-ce84-424d-a232-6955039249ad",
   "selectedModel": "opus",
   "providerState": {
     "previousProviderSessionIds": [
       "03229398-ae4c-42ae-a676-26a2f68f3a6e"
-    ]
+    ],
+    "providerSessionId": "0b908d14-ce84-424d-a232-6955039249ad"
   },
   "currentNote": "README.md",
   "usage": {
