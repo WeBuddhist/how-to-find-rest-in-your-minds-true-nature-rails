@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1786206402120-d4kocvn1y",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786206402182-3wflecb",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1786206402118-awyj9jz",
+      "timestamp": 1786206402118,
+      "rawDisplayText": "create a table of the ཁྲིད་རྐང་ program",
+      "canonicalText": "create a table of the ཁྲིད་རྐང་ program",
+      "context": {
+        "currentNote": {
+          "path": "1-SOURCES/Text/bo-don-khrid-byang-chub-lam-bzang.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "e64e2ff5bc4f9f49b659253f3c04352c4b071d81863d500268fbdbc7a762291e",
+      "providerUserMessageId": "ce67db2f-b473-4603-8810-e30accd80b14"
+    }
+  ]
+}
