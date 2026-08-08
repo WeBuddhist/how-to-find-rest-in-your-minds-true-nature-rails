@@ -4,11 +4,20 @@
   "title": "Create ཁྲིད་རྐང་ program table",
   "titleGenerationStatus": "success",
   "createdAt": 1786206402129,
-  "lastActivityAt": 1786206402129,
+  "lastActivityAt": 1786206822749,
   "sessionId": "6e4056ea-1167-445b-ab48-e0a230bb3830",
   "selectedModel": "opus",
   "providerState": {
     "providerSessionId": "6e4056ea-1167-445b-ab48-e0a230bb3830"
   },
-  "currentNote": "1-SOURCES/Text/bo-don-khrid-byang-chub-lam-bzang.md"
+  "currentNote": "1-SOURCES/Text/bo-don-khrid-byang-chub-lam-bzang.md",
+  "usage": {
+    "model": "opus",
+    "inputTokens": 2,
+    "cacheCreationInputTokens": 11741,
+    "cacheReadInputTokens": 198086,
+    "contextWindow": 1000000,
+    "contextTokens": 209829,
+    "percentage": 21
+  }
 }
