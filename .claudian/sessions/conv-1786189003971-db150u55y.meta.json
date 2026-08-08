@@ -5,10 +5,12 @@
   "titleGenerationStatus": "success",
   "createdAt": 1786189003978,
   "lastActivityAt": 1786189451340,
-  "sessionId": "03229398-ae4c-42ae-a676-26a2f68f3a6e",
+  "sessionId": null,
   "selectedModel": "opus",
   "providerState": {
-    "providerSessionId": "03229398-ae4c-42ae-a676-26a2f68f3a6e"
+    "previousProviderSessionIds": [
+      "03229398-ae4c-42ae-a676-26a2f68f3a6e"
+    ]
   },
   "currentNote": "README.md",
   "usage": {
