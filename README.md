@@ -1,4 +1,4 @@
-# How to Rest in the Nature of the Mind - rails
+# How to Find Rest in the Nature of the Mind - rails
 
 A collaborative [Obsidian](https://obsidian.md) vault that makes AI-powered work on a **classical text** reliable, traceable, and consistent at scale.
 
