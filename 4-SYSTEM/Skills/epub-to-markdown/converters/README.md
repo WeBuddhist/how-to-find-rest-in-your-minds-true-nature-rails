@@ -15,6 +15,7 @@ whenever you discover a new pattern, fix a bug, or make a design decision.
 | `vajra-vidya-library.py` | Vajra Vidya Library | Stable |
 | `lekphi.py` | LEK-PHI series (Khenpo Kunzang Palden) | Stable |
 | `rdi-ss.py` | RDI-SS series (Rigpe Dorje Institute Tibetan source texts) | Stable |
+| `chapter-subchapter-body.py` | Structural fallback: Chapter/Sub-Chapter/Body, no colour coding | Stable |
 
 Supporting scripts (in parent directory):
 
@@ -453,3 +454,56 @@ replaces the per-epub metadata.
 Verified for RDI-SS-42: merged Tibetan character count equals the sum of the
 two part files exactly, once the added volume headings (+21) and the one
 de-duplicated outline heading (−6) are accounted for.
+
+---
+
+### Chapter/Sub-Chapter/Body template — `chapter-subchapter-body.py`
+
+**Source**: `Chos_Go-q50uya.epub` — ཆོས་ཀྱི་སྒོ་འབྱེད་, Spyan snga ba Blo gros
+rgyal mtshan dpal bzang po (1403–1472), 2018 digital edition. No publisher
+field in OPF metadata, no `creator` either.
+
+Not a publisher converter — a **structural** one. Use it for any epub whose
+inspector profile shows only these three classes, all #000000:
+
+| Class | Count | Role |
+|---|---|---|
+| `Chapter` | 2 | `#` H1 |
+| `Sub-Chapter` | 20 | `##` H2 |
+| `Body` | 135 | plain text |
+
+No colour coding means no semantic block types are recoverable — do not invent
+`[[root\|…]]` / `[[quote\|…]]` callouts for these epubs. The span co-occurrence
+check returns nothing and the root-marker count is 0.
+
+**Author extraction**: the OPF has no `creator`; the title page carries the
+label མཛད་པ་པོ། followed by the name in the next Body paragraph.
+`find_author()` reads it from there.
+
+**Draft TOC**: emits the flat Sub-Chapter list at the top of the file, which is
+exactly the input format the `add-toc` skill expects (it infers nesting from
+the Tibetan ordinals and adds `^toc-X-Y-Z` block IDs).
+
+**Output stats (verified)**: 22 Sub-Chapter headings (20 styled + 2 promoted,
+see BUG-005); Tibetan chars in = out = 140,010.
+
+---
+
+### BUG-005 — Section headings styled as `Body` in the source
+
+**Symptom**: the converted outline jumped from གསུམ་པ། (third) to ལྔ་པ། (fifth)
+— the fourth section was missing, and one further section label inside the
+first chapter was absent too.
+
+**Root cause**: not a converter bug. Two paragraphs in `Chos_Go-q50uya.epub`
+carry `class="Body"` although their text is a section label wrapped in ༼ … ༽.
+The styling is wrong in the source file.
+
+**Fix**: `convert_epub_to_markdown(..., promote_orphan_headings=True)` treats a
+Body paragraph whose entire text is wrapped in ༼ … ༽ as a Sub-Chapter, and logs
+each promotion. Off by default: it repairs the source rather than reproducing
+it, so it should be switched on deliberately and the log checked. The two
+promoted labels for this epub were:
+
+- ༼ཚེ་བློས་བཏང་འདི་ཟབ་པ་དང་རྟོགས་དཀའ་བ་བསྟན་པ་ནི།༽
+- ༼༈ བཞི་པ་བཤད་ཉན་དང་ལུང་ཁྲིད་ལ་སོགས་པའི་གཞན་དོན་ལྟར་སྣང་རྣམས་སྤོང་བ་ནི།༽
