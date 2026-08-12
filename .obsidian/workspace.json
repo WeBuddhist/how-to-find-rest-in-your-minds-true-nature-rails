@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--06-sngon-groi-zhal-rgyun-zin-bris.md",
+                "file": "0-INBOX/W00KG07606-I00KG07639/སྔོན་འགྲོའི་སྐབས་ཀྱི་ཞལ་རྒྱུན་ཟིན་བྲིས་ཐོར་བུ།.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "W00KG07606-I00KG07639--06-sngon-groi-zhal-rgyun-zin-bris"
+              "title": "སྔོན་འགྲོའི་སྐབས་ཀྱི་ཞལ་རྒྱུན་ཟིན་བྲིས་ཐོར་བུ།"
             }
           }
         ]
@@ -209,6 +209,10 @@
   },
   "active": "f45eff0d6736f932",
   "lastOpenFiles": [
+    "0-INBOX/W00KG07606-I00KG07639/སྔོན་འགྲོའི་ཞལ་རྒྱུན་ཟིན་བྲིས་སུ་བཀོད་པ་མདོར་བསྡུས།.md",
+    "0-INBOX/W00KG07606-I00KG07639/སྔོན་འགྲོའི་སྐབས་ཀྱི་ཞལ་རྒྱུན་ཟིན་བྲིས་ཐོར་བུ།.md",
+    "0-INBOX/W00KG07606-I00KG07639/ཀློང་ཆེན་སྙིང་ཏིག་གི་སྔོན་འགྲོའི་བསྡུས་དོན་དཔལ་མགོན་བླ་མའི་ཞལ་ལུང་།.md",
+    "0-INBOX/W00KG07606-I00KG07639/སྔོན་འགྲོ་ཀུན་བཟང་ཞལ་ལུང་གི་སྐབས་སུ་མཁོ་བའི་བར་ལྡེབ་ཕྱོགས་བསྡུས།.md",
     "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--05-sngon-gro-kun-las-btus-pa.md",
     "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--04-gsol-debs.md",
     "0-INBOX/W00KG07606-I00KG07639.md",
@@ -217,7 +221,6 @@
     "0-INBOX/raw-data/root.md",
     "0-INBOX/raw-data/ch_2.md",
     "0-INBOX/raw-data/ch_1.md",
-    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--10-zhal-rgyun-zin-bris-thor-bu.md",
     "0-INBOX/raw-data/སྟོད་ཆ།",
     "0-INBOX/raw-data/བརྩ་བ་.txt",
     "0-INBOX/raw-data/དོན་ཁྲིད་བྱང་ཆུབ་ལམ་བཟང་_khrid_rkang.txt",
@@ -230,8 +233,6 @@
     "0-INBOX/raw-data/segmented_tsawa.txt",
     "1-SOURCES/References/spyan-snga-ba-chos-kyi-sgo-byed-bo.md",
     "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--09-yi-ge-brgya-pai-tshig-grel.md",
-    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--07-dpal-mgon-bla-mai-zhal-lung.md",
-    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--06-sngon-groi-zhal-rgyun-zin-bris.md",
     "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--01-ched-du-brjod-pai-tshig.md",
     "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--03-rnam-thar.md",
     "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--00-dkar-chag.md",
@@ -242,7 +243,6 @@
     "1-SOURCES/Commentaries/bo-kun-bzang-bla-mai-zhal-lung.md",
     "1-SOURCES/Text/bo-don-khrid-byang-chub-lam-bzang.md",
     "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--11-back-matter.md",
-    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--08-bar-ldeb-phyogs-bsdus.md",
     "0-INBOX/temp/bo-kun-bzang-bla-mai-zhal-lung-part-2.md",
     "0-INBOX/temp/bo-kun-bzang-bla-mai-zhal-lung-part-1.md"
   ]
