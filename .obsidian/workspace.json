@@ -207,8 +207,11 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "d066ca5c15f520a5",
+  "active": "eb2538ea3fa47051",
   "lastOpenFiles": [
+    "0-INBOX/W00KG07606-I00KG07639.md",
+    "0-INBOX/RDI-SS-42-1-Patrul_Rinpoche-The_Words_of_My_Perfect_Teacher_Part 1 (1).epub",
+    "0-INBOX/RDI-SS-42-2-Patrul_Rinpoche-The_Words_of_My_Perfect_Teacher_Part 2.epub",
     "1-SOURCES/Text/bo-don-khrid-byang-chub-lam-bzang.md",
     "1-SOURCES/References/ཐར་ལམ་རབ་གསལ།.md",
     "README.md",
@@ -223,8 +226,6 @@
     "gemini-scribe/Scheduled-Tasks/scheduled-tasks-state.json",
     "gemini-scribe/Prompts/example-expert.md",
     "gemini-scribe/Scheduled-Tasks",
-    "gemini-scribe/Prompts",
-    "gemini-scribe",
     "CLAUDE.md",
     "4-SYSTEM/Skills/epub-to-markdown/converters/README.md",
     "4-SYSTEM/Skills/verse-context/SKILL.md",
@@ -243,7 +244,6 @@
     "4-SYSTEM/Skills/glossary-select/SKILL.md",
     "4-SYSTEM/Skills/interlinear-gloss/SKILL.md",
     "4-SYSTEM/Skills/glossary-combine/SKILL.md",
-    "4-SYSTEM/Skills/glossary-extract-raw/SKILL.md",
-    "4-SYSTEM/Skills/format-commentary/SKILL.md"
+    "4-SYSTEM/Skills/glossary-extract-raw/SKILL.md"
   ]
 }
