@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0-INBOX/W00KG07606-I00KG07639/སྔོན་འགྲོའི་སྐབས་ཀྱི་ཞལ་རྒྱུན་ཟིན་བྲིས་ཐོར་བུ།.md",
+                "file": "0-INBOX/raw-data/ch_2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "སྔོན་འགྲོའི་སྐབས་ཀྱི་ཞལ་རྒྱུན་ཟིན་བྲིས་ཐོར་བུ།"
+              "title": "ch_2"
             }
           }
         ]
@@ -209,18 +209,32 @@
   },
   "active": "f45eff0d6736f932",
   "lastOpenFiles": [
-    "0-INBOX/W00KG07606-I00KG07639/སྔོན་འགྲོའི་ཞལ་རྒྱུན་ཟིན་བྲིས་སུ་བཀོད་པ་མདོར་བསྡུས།.md",
-    "0-INBOX/W00KG07606-I00KG07639/སྔོན་འགྲོའི་སྐབས་ཀྱི་ཞལ་རྒྱུན་ཟིན་བྲིས་ཐོར་བུ།.md",
-    "0-INBOX/W00KG07606-I00KG07639/ཀློང་ཆེན་སྙིང་ཏིག་གི་སྔོན་འགྲོའི་བསྡུས་དོན་དཔལ་མགོན་བླ་མའི་ཞལ་ལུང་།.md",
-    "0-INBOX/W00KG07606-I00KG07639/སྔོན་འགྲོ་ཀུན་བཟང་ཞལ་ལུང་གི་སྐབས་སུ་མཁོ་བའི་བར་ལྡེབ་ཕྱོགས་བསྡུས།.md",
-    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--05-sngon-gro-kun-las-btus-pa.md",
+    "0-INBOX/R9CEE42E2 རྫོགས་པ་ཆེན་པོ་སེམས་ཉིད་ངལ་གསོ་རྩ་འགྲེལ། སྟོད་ཆ།.md",
+    "0-INBOX/R9CEE42E2 རྫོགས་པ་ཆེན་པོ་སེམས་ཉིད་ངལ་གསོ་རྩ་འགྲེལ། སྨད་ཆ།.md",
+    "0-INBOX/raw-data/segmented_tsawa.md",
+    "0-INBOX/raw-data/UTMW1PD100944_86E53A_I1PD106623_bo,sa,zh.md",
+    "0-INBOX/raw-data/UTMW1PD100944_108B2E_I1PD106623_bo,sa,zh.md",
+    "1-SOURCES/Commentaries/root.md",
+    "1-SOURCES/Commentaries/སེམས་ཉིད་ངལ་གསོའི་རྩ་བ།.md",
+    "1-SOURCES/Commentaries/bo-kun-bzang-bla-mai-zhal-lung.md",
+    "1-SOURCES/Text/bo-don-khrid-byang-chub-lam-bzang.md",
+    "0-INBOX/raw-data/དོན་ཁྲིད་བྱང་ཆུབ་ལམ་བཟང་_khrid_rkang.md",
+    "0-INBOX/raw-data/དོན་ཁྲིད་བྱང་ཆུབ་ལམ་བཟང་.md",
+    "0-INBOX/raw-data/ch_2.md",
+    "0-INBOX/raw-data/ch_1.md",
+    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--09-yi-ge-brgya-pai-tshig-grel.md",
     "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--04-gsol-debs.md",
+    "1-SOURCES/References/སེམས་ཉིད་ངལ་གསོའི་བསྡུས་དོན་པདྨ་དཀར་པོའི་ཟིལ་མངར།.md",
+    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--03-rnam-thar.md",
+    "0-INBOX/W00KG07606-I00KG07639/སྔོན་འགྲོ་ཀུན་བཟང་ཞལ་ལུང་གི་སྐབས་སུ་མཁོ་བའི་བར་ལྡེབ་ཕྱོགས་བསྡུས།.md",
+    "0-INBOX/W00KG07606-I00KG07639/སྔོན་འགྲོ་ཀུན་ལས་བཏུས་པ།.md",
+    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--11-back-matter.md",
+    "0-INBOX/W00KG07606-I00KG07639/སྔོན་འགྲོའི་སྐབས་ཀྱི་ཞལ་རྒྱུན་ཟིན་བྲིས་ཐོར་བུ།.md",
+    "0-INBOX/W00KG07606-I00KG07639/སྔོན་འགྲོའི་ཞལ་རྒྱུན་ཟིན་བྲིས་སུ་བཀོད་པ་མདོར་བསྡུས།.md",
+    "0-INBOX/W00KG07606-I00KG07639/ཀློང་ཆེན་སྙིང་ཏིག་གི་སྔོན་འགྲོའི་བསྡུས་དོན་དཔལ་མགོན་བླ་མའི་ཞལ་ལུང་།.md",
     "0-INBOX/W00KG07606-I00KG07639.md",
     "0-INBOX/temp/_to_delete/bo-kun-bzang-bla-mai-zhal-lung-part-2.md",
     "0-INBOX/temp/_to_delete/bo-kun-bzang-bla-mai-zhal-lung-part-1.md",
-    "0-INBOX/raw-data/root.md",
-    "0-INBOX/raw-data/ch_2.md",
-    "0-INBOX/raw-data/ch_1.md",
     "0-INBOX/raw-data/སྟོད་ཆ།",
     "0-INBOX/raw-data/བརྩ་བ་.txt",
     "0-INBOX/raw-data/དོན་ཁྲིད་བྱང་ཆུབ་ལམ་བཟང་_khrid_rkang.txt",
@@ -230,20 +244,6 @@
     "0-INBOX/raw-data/UTMW1PD100944_86E53A_I1PD106623_bo,sa,zh.txt",
     "0-INBOX/raw-data/transfer_line.py",
     "0-INBOX/raw-data/test.py",
-    "0-INBOX/raw-data/segmented_tsawa.txt",
-    "1-SOURCES/References/spyan-snga-ba-chos-kyi-sgo-byed-bo.md",
-    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--09-yi-ge-brgya-pai-tshig-grel.md",
-    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--01-ched-du-brjod-pai-tshig.md",
-    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--03-rnam-thar.md",
-    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--00-dkar-chag.md",
-    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--02-gsal-bshad.md",
-    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--00-front-matter.md",
-    "1-SOURCES/References/ཐར་ལམ་རབ་གསལ།.md",
-    "1-SOURCES/References/སེམས་ཉིད་ངལ་གསོའི་བསྡུས་དོན་པདྨ་དཀར་པོའི་ཟིལ་མངར།.md",
-    "1-SOURCES/Commentaries/bo-kun-bzang-bla-mai-zhal-lung.md",
-    "1-SOURCES/Text/bo-don-khrid-byang-chub-lam-bzang.md",
-    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--11-back-matter.md",
-    "0-INBOX/temp/bo-kun-bzang-bla-mai-zhal-lung-part-2.md",
-    "0-INBOX/temp/bo-kun-bzang-bla-mai-zhal-lung-part-1.md"
+    "0-INBOX/raw-data/segmented_tsawa.txt"
   ]
 }
