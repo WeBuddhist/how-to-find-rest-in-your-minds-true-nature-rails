@@ -438,3 +438,18 @@ The InDesign/epub export adds a `Tibetan-karchak` paragraph reading
 "Return to the table of contents" linking back to the karchak anchor. It is
 reader navigation, not book content, and is filtered by exact text match
 (`NAV_TEXTS`) rather than by class, since the class is otherwise meaningful.
+
+### DD-010 — Multi-part works merge with demoted headings
+
+RDI-SS-42 ships as two epubs (one work, two volumes). `rdi-ss.py` exposes
+`convert_parts_to_single_markdown(paths, out, frontmatter=…, volume_titles=…)`,
+which converts each part, demotes every heading by one level, and puts a
+`# <volume title>` H1 above each. The result is a single clean hierarchy —
+H1 volume / H2 chapter / H3 section — instead of two files' worth of competing
+H1s. The outline block is merged and grouped by volume, and a single
+frontmatter block (the commentary spec from `1-SOURCES/About Sources.md` §4)
+replaces the per-epub metadata.
+
+Verified for RDI-SS-42: merged Tibetan character count equals the sum of the
+two part files exactly, once the added volume headings (+21) and the one
+de-duplicated outline heading (−6) are accounted for.

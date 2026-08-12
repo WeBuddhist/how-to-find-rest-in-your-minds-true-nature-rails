@@ -482,3 +482,83 @@ if __name__ == '__main__':
     parser.add_argument('output_path', help='Path to the output Markdown file')
     args = parser.parse_args()
     convert_epub_to_markdown(args.epub_path, args.output_path)
+
+
+# ---------------------------------------------------------------------------
+# Multi-part merge
+# ---------------------------------------------------------------------------
+
+def _demote_headings(md, levels=1):
+    """Push every ATX heading down `levels` so a volume heading can sit above."""
+    out = []
+    for line in md.split('\n'):
+        if line.startswith('#'):
+            hashes = len(line) - len(line.lstrip('#'))
+            if 0 < hashes <= 6 and line[hashes:hashes + 1] == ' ':
+                line = '#' * min(hashes + levels, 6) + line[hashes:]
+        out.append(line)
+    return '\n'.join(out)
+
+
+def convert_parts_to_single_markdown(epub_paths, output_path, frontmatter=None,
+                                     volume_titles=None):
+    """
+    Convert several part-epubs of one work into a single Markdown file.
+
+    Body headings are demoted one level so each volume can carry an H1
+    (`# <volume title>`); the outline block is merged, grouped by volume.
+    `frontmatter` (dict) replaces the per-epub metadata block — pass the
+    commentary/root-text frontmatter required by 1-SOURCES/About Sources.md.
+    """
+    volume_titles = volume_titles or {}
+    sections = []
+    outline = []
+
+    for epub_path in epub_paths:
+        book = epub.read_epub(epub_path)
+        part = detect_part(book) or str(len(sections) + 1)
+        volume = volume_titles.get(part) or ('དེབ་' + part)
+
+        body_md = ''
+        labels = []
+        for item_id, _linear in book.spine:
+            item = book.get_item_with_id(item_id)
+            if not item or item.get_type() != ebooklib.ITEM_DOCUMENT:
+                continue
+            fname = item.get_name().split('/')[-1]
+            if fname.endswith(FRONT_MATTER_SUFFIXES) or fname == 'toc.xhtml':
+                continue
+            soup = BeautifulSoup(item.get_content(), 'html.parser')
+            for t in soup(['script', 'style']):
+                t.decompose()
+            body = soup.find('body')
+            if not body:
+                continue
+            doc_md, doc_labels = process_body(body)
+            if doc_md.strip():
+                if body_md:
+                    body_md += '---\n\n'
+                body_md += doc_md
+            labels.extend(doc_labels)
+
+        sections.append('# ' + volume + '\n\n' + _demote_headings(body_md))
+        outline.append((volume, labels))
+
+    fm = ''
+    if frontmatter:
+        fm = ('---\n'
+              + yaml.dump(frontmatter, allow_unicode=True, sort_keys=False)
+              + '---\n\n')
+
+    toc_block = '## ས་བཅད་ / Outline\n\n'
+    for volume, labels in outline:
+        toc_block += '### ' + volume + '\n\n'
+        toc_block += '\n'.join('- ' + label for label in labels) + '\n\n'
+    toc_block += '---\n\n'
+
+    with open(output_path, 'w', encoding='utf-8') as f:
+        f.write(fm + toc_block + '\n\n'.join(sections))
+
+    print('Merged %d parts into %s' % (len(epub_paths), output_path))
+    for volume, labels in outline:
+        print('  %s — outline entries: %d' % (volume, len(labels)))
