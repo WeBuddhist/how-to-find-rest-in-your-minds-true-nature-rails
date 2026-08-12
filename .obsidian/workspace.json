@@ -11,10 +11,14 @@
             "id": "40c2d0c8fed74aca",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--03-rnam-thar.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "W00KG07606-I00KG07639--03-rnam-thar"
             }
           }
         ]
@@ -205,6 +209,16 @@
   },
   "active": "40c2d0c8fed74aca",
   "lastOpenFiles": [
+    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--04-gsol-debs.md",
+    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--03-rnam-thar.md",
+    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--02-gsal-bshad.md",
+    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--01-ched-du-brjod-pai-tshig.md",
+    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--00-front-matter.md",
+    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--00-dkar-chag.md",
+    "1-SOURCES/References/ཐར་ལམ་རབ་གསལ།.md",
+    "0-INBOX/SHE-SG-07-Fourth_Zhechen_Gyaltsap_Gyurme_Pema_Namgyal-An_Extensive_Presentation_of_the_Preliminary_Practices.epub",
+    "0-INBOX/SHE-SG-11-Fourth_Zhechen_Gyaltsap-Longchenpa-Commentaries_on_the_Nine_Yanas_and_Longchenpa_Wish-Fulfilling_Treasury.epub",
+    "1-SOURCES/References/སེམས་ཉིད་ངལ་གསོའི་བསྡུས་དོན་པདྨ་དཀར་པོའི་ཟིལ་མངར།.md",
     "1-SOURCES/Commentaries/bo-kun-bzang-bla-mai-zhal-lung.md",
     "1-SOURCES/Text/bo-don-khrid-byang-chub-lam-bzang.md",
     "0-INBOX/W00KG07606-I00KG07639.md",
@@ -216,17 +230,10 @@
     "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--07-dpal-mgon-bla-mai-zhal-lung.md",
     "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--06-sngon-groi-zhal-rgyun-zin-bris.md",
     "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--05-sngon-gro-kun-las-btus-pa.md",
-    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--04-gsol-debs.md",
-    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--03-rnam-thar.md",
-    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--02-gsal-bshad.md",
-    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--01-ched-du-brjod-pai-tshig.md",
-    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--00-dkar-chag.md",
-    "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--00-front-matter.md",
     "0-INBOX/W00KG07606-I00KG07639",
     "0-INBOX/temp/_to_delete/bo-kun-bzang-bla-mai-zhal-lung-part-2.md",
     "0-INBOX/temp/_to_delete/bo-kun-bzang-bla-mai-zhal-lung-part-1.md",
     "0-INBOX/temp/_to_delete",
-    "1-SOURCES/References/ཐར་ལམ་རབ་གསལ།.md",
     "4-SYSTEM/Skills/epub-to-markdown/converters/rdi-ss.py",
     "0-INBOX/temp/bo-kun-bzang-bla-mai-zhal-lung-part-2.md",
     "0-INBOX/temp/bo-kun-bzang-bla-mai-zhal-lung-part-1.md",
@@ -236,9 +243,6 @@
     "README.md.tmp.4048.a9b48391c9df",
     "1-SOURCES/Text/དོན་ཁྲིད་བྱང་ཆུབ་ལམ་བཟང་།.md",
     "1-SOURCES/Text/Untitled.md",
-    "1-SOURCES/Text/དོན་ཁྲིད་བྱང་ཆུབ་ལམ་བཟང་།.txt",
-    "gemini-scribe/Scheduled-Tasks/Runs",
-    "gemini-scribe/Skills",
-    "gemini-scribe/Prompts/example-expert.md"
+    "1-SOURCES/Text/དོན་ཁྲིད་བྱང་ཆུབ་ལམ་བཟང་།.txt"
   ]
 }
