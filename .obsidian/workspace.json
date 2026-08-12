@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1-SOURCES/References/ཐར་ལམ་རབ་གསལ།.md",
+                "file": "0-INBOX/W00KG07606-I00KG07639.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ཐར་ལམ་རབ་གསལ།"
+              "title": "W00KG07606-I00KG07639"
             }
           }
         ]
@@ -207,13 +207,16 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "eb2538ea3fa47051",
+  "active": "d066ca5c15f520a5",
   "lastOpenFiles": [
+    "1-SOURCES/References/ཐར་ལམ་རབ་གསལ།.md",
+    "4-SYSTEM/Skills/epub-to-markdown/converters/rdi-ss.py",
+    "0-INBOX/temp/bo-kun-bzang-bla-mai-zhal-lung-part-2.md",
+    "0-INBOX/temp/bo-kun-bzang-bla-mai-zhal-lung-part-1.md",
     "0-INBOX/W00KG07606-I00KG07639.md",
     "0-INBOX/RDI-SS-42-1-Patrul_Rinpoche-The_Words_of_My_Perfect_Teacher_Part 1 (1).epub",
     "0-INBOX/RDI-SS-42-2-Patrul_Rinpoche-The_Words_of_My_Perfect_Teacher_Part 2.epub",
     "1-SOURCES/Text/bo-don-khrid-byang-chub-lam-bzang.md",
-    "1-SOURCES/References/ཐར་ལམ་རབ་གསལ།.md",
     "README.md",
     "README.md.tmp.4048.a9b48391c9df",
     "1-SOURCES/Text/དོན་ཁྲིད་བྱང་ཆུབ་ལམ་བཟང་།.md",
@@ -225,7 +228,6 @@
     "gemini-scribe/Agent-Sessions",
     "gemini-scribe/Scheduled-Tasks/scheduled-tasks-state.json",
     "gemini-scribe/Prompts/example-expert.md",
-    "gemini-scribe/Scheduled-Tasks",
     "CLAUDE.md",
     "4-SYSTEM/Skills/epub-to-markdown/converters/README.md",
     "4-SYSTEM/Skills/verse-context/SKILL.md",
@@ -241,9 +243,6 @@
     "4-SYSTEM/Skills/json-to-source-text/SKILL.md",
     "4-SYSTEM/Skills/local-wiki-article/SKILL.md",
     "4-SYSTEM/Skills/json-to-commentary/SKILL.md",
-    "4-SYSTEM/Skills/glossary-select/SKILL.md",
-    "4-SYSTEM/Skills/interlinear-gloss/SKILL.md",
-    "4-SYSTEM/Skills/glossary-combine/SKILL.md",
-    "4-SYSTEM/Skills/glossary-extract-raw/SKILL.md"
+    "4-SYSTEM/Skills/glossary-select/SKILL.md"
   ]
 }

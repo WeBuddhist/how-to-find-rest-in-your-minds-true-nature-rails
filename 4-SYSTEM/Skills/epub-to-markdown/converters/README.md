@@ -14,6 +14,7 @@ whenever you discover a new pattern, fix a bug, or make a design decision.
 | `epub_to_markdown.py` | Generic fallback (template) | Stable |
 | `vajra-vidya-library.py` | Vajra Vidya Library | Stable |
 | `lekphi.py` | LEK-PHI series (Khenpo Kunzang Palden) | Stable |
+| `rdi-ss.py` | RDI-SS series (Rigpe Dorje Institute Tibetan source texts) | Stable |
 
 Supporting scripts (in parent directory):
 
@@ -252,6 +253,46 @@ p=('Tibetan-Commentary-Non-Indent',) span=('Tibetan-External-Citations',) n=3
 
 ---
 
+### RDI-SS series — `rdi-ss.py`
+
+**Source**: RDI-SS-42-1 and RDI-SS-42-2, Dza Patrul Rinpoche,
+ཀུན་བཟང་བླ་མའི་ཞལ་ལུང་། (*The Words of My Perfect Teacher*), EPUB 2023,
+no publisher field in OPF metadata. Series identified by spine document naming
+(`RDI-SS-<n>-<part>[-<doc>].xhtml`). Same InDesign CSS family as LEK-PHI, plus
+root-text, commentary-in-verse, heading and karchak classes.
+
+**CSS class inventory** (part 1 / part 2 counts):
+
+| Class | Colour | Count | Role |
+|---|---|---|---|
+| `Tibetan-Sabche` | #005e7f (blue) | 317 / 273 | `[[toc\|…]]` |
+| `Tibetan-External-Citations` | #897335 (gold) | 483 / 547 | `[[quote\|…]]` |
+| `Tibetan-Citations-in-Verse_*` | #897335 (gold) | 471 / 534 | `[[quote\|…]]` per stanza |
+| `Tibetan-Commentary-in-Verse_*` | #897335 (gold) | 50 / 68 | `[[verse\|…]]` per stanza |
+| `Tibetan-Root-Text[_*]`, `Long-Root-Text-Middile-Line-` | #8b1409 (red) | 76 / 40 | `[[root\|…]]` per stanza |
+| `Tibetan-Chapter` / `Tibetan-Chapter-` | #343233 | 7 / 4 | `#` H1 |
+| `Tibetan-Heading`, `Tibetan-karchak` | #343233 | 12 / 35 | `##` H2 |
+| `Karchak-Indented[-lastline]` | #343233 | 71 / 66 | `- ` list item |
+| `Tibetan-Commentary[-Non-Indent\|-Small]`, `Tibetan-Regular-Indented`, `Justification-Body` | #343233 | — | plain text |
+| `Credits-Page_*`, `Front-*`, `Name-of-Author`, `Tibetan-Book-Title` | — | — | skip |
+
+**Spine**: `cover.xhtml` (skip), `RDI-SS-42-N.xhtml` (credits — skipped by class),
+`RDI-SS-42-N-1…3.xhtml` (karchak, publisher's note, body), `toc.xhtml` (skip).
+Note the layout differs between parts: in part 1 the karchak is its own
+document; in part 2 it opens the body document.
+
+**Output stats (verified)**:
+
+| | Part 1 | Part 2 |
+|---|---|---|
+| `[[toc\|…]]` | 55 | 45 |
+| `[[quote\|…]]` | 101 | 138 |
+| `[[verse\|…]]` | 12 | 12 |
+| `[[root\|…]]` | 11 | 5 |
+| Tibetan chars in vs out | 242,071 = 242,071 | 281,290 = 281,290 |
+
+---
+
 ## Bug log
 
 > Append every bug found and fixed. Include: symptom, root cause, fix.
@@ -364,3 +405,36 @@ extracted text before callout wrapping, so it correctly handles multi-line
 verse content split across `\n` within a single run. A line-by-line
 post-processor on the final MD file also works (see `root_marker_to_bold.py`)
 but is less reliable for multiline callout content.
+
+### DD-006 — Stanza splitting on `*-First-Line`, not "same family"
+
+RDI-SS marks verse lines as `*-First-Line` / `*-Middle-Lines` / `*-Last-Line`,
+but many stanzas have no Last-Line paragraph. Grouping merely on "consecutive
+paragraphs of the same family" merged the entire six-stanza homage into one
+callout. `rdi-ss.py` therefore closes the current group whenever a new
+`*-First-Line` paragraph is met. Where a passage contains only Middle-Lines
+(e.g. the concluding aspiration in RDI-SS-42-2-2), it stays one block — the
+source gives no stanza boundaries to split on.
+
+### DD-007 — Karchak kept in place; outline still built from the body
+
+RDI-SS books carry a printed karchak (དཀར་ཆག) with its own `1} / 1] / 1)`
+numbering that the body sabche labels do not have. It is emitted as a Markdown
+list where it occurs, and inline sabche spans inside karchak paragraphs are
+excluded from the generated outline so entries are not duplicated. The outline
+block at the top of the file is still built from body sabche labels
+(Algorithm §E).
+
+### DD-008 — `༵` (U+0F35) is a name marker, not a root-text marker
+
+Part 1 contains four occurrences of `༵` (TIBETAN MARK NGAS BZUNG NYI ZLA) in
+the homage verse, marking the hidden name མཁྱེན་བརྩེའི་འོད་ཟེར. This is not the
+root-text marker `༷` (U+0F37) and must not be run through
+`convert_root_markers()`; the characters are preserved verbatim.
+
+### DD-009 — Skip exporter navigation text
+
+The InDesign/epub export adds a `Tibetan-karchak` paragraph reading
+"Return to the table of contents" linking back to the karchak anchor. It is
+reader navigation, not book content, and is filtered by exact text match
+(`NAV_TEXTS`) rather than by class, since the class is otherwise meaningful.
