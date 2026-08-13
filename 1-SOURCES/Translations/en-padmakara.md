@@ -24,36 +24,7 @@ Guru Padmasambhava
 
 Longchen Rabjam Drimé Özer
 
-The Padmakara Translation Group gratefully acknowledges the generous support of the Tsadra Foundation in sponsoring the translation and preparation of this book.
 
-Shambhala Publications, Inc.
-
-4720 Walnut Street
-
-Boulder, Colorado 80301
-
-www.shambhala.com
-
-© 2017 by the Padmakara Translation Group
-
-All rights reserved. No part of this book may be reproduced in any form or by any means, electronic or mechanical, including photocopying, recording, or by any information storage and retrieval system, without permission in writing from the publisher.
-
-Front cover art: Detail of thangka of Milarepa, Tibet, 19. Jh.; inv. no. IId 13769, Essen collection; Photographer: Omar Lemke © Museum der Kulturen Basel, Switzerland; All rights reserved.
-
-LIBRARY OF CONGRESS CATALOGING-IN-PUBLICATION DATA
-
-Names: Klong-chen-pa Dri-med-’od-zer, 1308–1363, author. | Klong-chen-pa Dri-med-’od-zer, 1308–1363. Sems nyid ngal gso. English. | Klong-chen-pa Dri-med-’od-zer, 1308–1363. Bsam gtan ngal gso. English. | Klong-chen-pa Dri-med-’od-zer, 1308–1363. Sgyu ma ngal gso. English. | Comité de traduction Padmakara, translator.
-
-Title: The Trilogy of rest / Longchen Rabjam; translated by the Padmakara Translation Group. Description: First edition. | Boulder: Shambhala, 2017– | Includes bibliographical references and index. | Includes bibliographical references and index.
-
-Identifiers: LCCN 2017009896 | ISBN 9781611805161 (hardback: v. 1)
-eISBN 9780834841161
-
-Subjects: LCSH: Rdzogs-chen—Early works to 1800. | BISAC: RELIGION / Buddhism / Tibetan. | RELIGION / Buddhism / Sacred Writings. | RELIGION / Buddhism / Rituals & Practice.
-
-Classification: LCC BQ7662.4 .K5465 2017 | DDC 294.3/420423—dc23
-
-LC record available at https://lccn.loc.gov/​2017009896
 
 ## FOREWORD
 
