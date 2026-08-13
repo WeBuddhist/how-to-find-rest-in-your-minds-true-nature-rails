@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1-SOURCES/Translations/en-padmakara.md",
+                "file": "1-SOURCES/Commentaries/en-Finding Rest in the Nature of the Mind.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "en-padmakara"
+              "title": "en-Finding Rest in the Nature of the Mind"
             }
           }
         ]
@@ -192,7 +192,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 979.5
+    "width": 256.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -217,7 +217,7 @@
     "4-SYSTEM/Skills/epub-to-markdown/converters/mobi7-flat.py",
     "1-SOURCES/References/khyentse-poison-is-medicine-en.md",
     "4-SYSTEM/Skills/epub-to-markdown/converters/shambhala.py",
-    "1-SOURCES/Translations/en-padmakara.md",
+    "1-SOURCES/Commentaries/en-Finding Rest in the Nature of the Mind.md",
     "0-INBOX/Not for Happiness_ A Guide to the So-Called Preliminary Practices.mobi",
     "0-INBOX/Dzongsar_Khyentse_Rinpoche_Poison_is_Medicine.epub",
     "0-INBOX/raw-data/Finding rest in the nature of the mind _ Trilogy of Rest, -- Longchenpa  (Author) -- 1, 20171205 -- Shambhala Publications, Incorporated -- isbn13 9780834841161 -- f287d91eb0ca522c420f0ea9d72c570e -- Anna’s Arch.epub",
