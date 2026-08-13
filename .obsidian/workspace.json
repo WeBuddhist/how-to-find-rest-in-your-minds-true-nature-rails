@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0-INBOX/R9CEE42E2 རྫོགས་པ་ཆེན་པོ་སེམས་ཉིད་ངལ་གསོ་རྩ་འགྲེལ། སྟོད་ཆ།.md",
+                "file": "1-SOURCES/Translations/en-padmakara.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "R9CEE42E2 རྫོགས་པ་ཆེན་པོ་སེམས་ཉིད་ངལ་གསོ་རྩ་འགྲེལ། སྟོད་ཆ།"
+              "title": "en-padmakara"
             }
           }
         ]
@@ -207,14 +207,16 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "eb2538ea3fa47051",
+  "active": "f45eff0d6736f932",
   "lastOpenFiles": [
+    "1-SOURCES/Text/bo-don-khrid-byang-chub-lam-bzang.md",
+    "1-SOURCES/Commentaries/en-guide-to-words-of-my-perfect-teacher.md",
+    "1-SOURCES/Commentaries/en-not-for-happiness.md",
+    "0-INBOX/R9CEE42E2 རྫོགས་པ་ཆེན་པོ་སེམས་ཉིད་ངལ་གསོ་རྩ་འགྲེལ། སྟོད་ཆ།.md",
     "4-SYSTEM/Skills/epub-to-markdown/converters/siddharthas-intent.py",
     "4-SYSTEM/Skills/epub-to-markdown/converters/mobi7-flat.py",
     "1-SOURCES/References/khyentse-poison-is-medicine-en.md",
-    "1-SOURCES/Commentaries/en-not-for-happiness.md",
     "4-SYSTEM/Skills/epub-to-markdown/converters/shambhala.py",
-    "1-SOURCES/Commentaries/en-guide-to-words-of-my-perfect-teacher.md",
     "1-SOURCES/Translations/en-padmakara.md",
     "0-INBOX/Not for Happiness_ A Guide to the So-Called Preliminary Practices.mobi",
     "0-INBOX/Dzongsar_Khyentse_Rinpoche_Poison_is_Medicine.epub",
@@ -225,7 +227,6 @@
     "1-SOURCES/Commentaries/bo-zhechen-gyaltsap-ngondro-khrid-yig.md",
     "0-INBOX/R9CEE42E2 རྫོགས་པ་ཆེན་པོ་སེམས་ཉིད་ངལ་གསོ་རྩ་འགྲེལ། སྨད་ཆ།.md",
     "1-SOURCES/Commentaries/སེམས་ཉིད་ངལ་གསོའི་རྩ་བ།.md",
-    "0-INBOX/R9CEE42E2 རྫོགས་པ་ཆེན་པོ་སེམས་ཉིད་ངལ་གསོ་རྩ་འགྲེལ། སྟོད་ཆ།.md",
     "0-INBOX/UTMW1KG4884_66179A_I1KG4906_bo,sa,zh.md",
     "0-INBOX/W00KG07606-I00KG07639.md",
     "0-INBOX/raw-data/UTMW1PD100944_108B2E_I1PD106623_bo,sa,zh.md",
@@ -234,7 +235,6 @@
     "0-INBOX/raw-data/segmented_tsawa.md",
     "1-SOURCES/Commentaries/root.md",
     "1-SOURCES/Commentaries/bo-kun-bzang-bla-mai-zhal-lung.md",
-    "1-SOURCES/Text/bo-don-khrid-byang-chub-lam-bzang.md",
     "0-INBOX/raw-data/དོན་ཁྲིད་བྱང་ཆུབ་ལམ་བཟང་_khrid_rkang.md",
     "0-INBOX/raw-data/དོན་ཁྲིད་བྱང་ཆུབ་ལམ་བཟང་.md",
     "0-INBOX/raw-data/ch_1.md",
@@ -243,7 +243,6 @@
     "1-SOURCES/References/སེམས་ཉིད་ངལ་གསོའི་བསྡུས་དོན་པདྨ་དཀར་པོའི་ཟིལ་མངར།.md",
     "0-INBOX/W00KG07606-I00KG07639/W00KG07606-I00KG07639--03-rnam-thar.md",
     "0-INBOX/raw-data/སྟོད་ཆ།",
-    "0-INBOX/raw-data/བརྩ་བ་.txt",
-    "0-INBOX/raw-data/དོན་ཁྲིད་བྱང་ཆུབ་ལམ་བཟང་_khrid_rkang.txt"
+    "0-INBOX/raw-data/བརྩ་བ་.txt"
   ]
 }
