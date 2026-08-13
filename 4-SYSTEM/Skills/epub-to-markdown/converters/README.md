@@ -17,6 +17,7 @@ whenever you discover a new pattern, fix a bug, or make a design decision.
 | `rdi-ss.py` | RDI-SS series (Rigpe Dorje Institute Tibetan source texts) | Stable |
 | `chapter-subchapter-body.py` | Structural fallback: Chapter/Sub-Chapter/Body, no colour coding | Stable |
 | `she-sg.py` | SHE-SG series (Fourth Zhechen Gyaltsap) | Stable |
+| `shambhala.py` | Shambhala Publications English trade ebooks (2 templates) | Stable |
 
 Supporting scripts (in parent directory):
 
@@ -553,3 +554,83 @@ epub in this vault where `convert_root_markers()` actually fires — plus 252 `�
 
 **Images**: 2 in SHE-SG-07 and 4 in SHE-SG-11 content documents are not
 extracted (text-only conversion).
+
+---
+
+### Shambhala trade ebooks — `shambhala.py`
+
+**Source**: *Finding Rest in the Nature of the Mind* (Longchenpa, tr. Padmakara,
+Shambhala 2017) and *A Guide to the Words of My Perfect Teacher* (Khenpo Ngawang
+Pelzang, tr. Padmakara, Shambhala 2004). First converter in this folder for a
+publisher that actually declares itself: `publisher_slug` = `shambhala`.
+
+These are commercial English ebooks — no colour coding, no sa bcad, no root
+markers. Structure comes from heading tags and paragraph classes, so none of
+the `[[toc|…]]` / `[[quote|…]]` machinery applies.
+
+**Two templates under one slug.** `detect_template()` picks by looking for real
+heading tags:
+
+| Template | Book | Headings | Verse |
+|---|---|---|---|
+| `epub3` | Finding Rest (2017) | `h1`/`h2` with classes `part4`, `chapter4`, `chapter9`, `section`, `subchapter4`, `section1` | `p.hanging0`, `p.hanging4` |
+| `legacy` | Guide to WMPT (2004) | none — `p.part-number` + `p.part-title`, `p.chapter-number` + `p.chapter-title`, `p.subhead`, `p.H1_1` … `p.H4` | `p.body-text_block*`, `p.body-text_poem*` |
+
+A `*-number` paragraph is held and merged with the `*-title` that follows, so
+"CHAPTER FOUR" + "Actions: The Principle of Cause and Effect" is one heading.
+
+**Verse vs. hanging indent**: `hanging0` is also the bibliography and index
+style in the 2017 book, so verse classification is gated on
+`is_body_document()` (prologue, conclusion, `c\d+` / `p\d+` chapter files).
+Outside body documents the same class is plain text.
+
+**Skipped by default**: cover, the ebook's own contents list, the index (page
+references do not survive as text), and Shambhala marketing / sign-up pages —
+`keep_index=True` / `keep_marketing=True` retain them. Everything else is kept,
+including forewords, introductions, endnotes, footnotes, glossary, bibliography
+and the copyright page.
+
+**Output stats (verified)**:
+
+| | Finding Rest | Guide to WMPT |
+|---|---|---|
+| Headings | 54 | 256 |
+| Output size | 497 KB | 705 KB |
+| Alphanumeric chars in vs out | −4 (see below) | 0 (exact) |
+| Documents skipped | 3 (34 KB) | 4 (20 KB) |
+
+The −4 is the two ebook conversion-code paragraphs (`a`, `v5.1`) in
+`EPUB3_SKIP_CLASSES`, which are production artefacts, not content.
+
+---
+
+### BUG-006 — Verse numbers turned verses into Markdown ordered lists
+
+**Symptom**: root verses in Finding Rest begin `1. So now you have your
+freedom,` — Markdown reads the leading `1. ` as an ordered-list marker and
+renders the whole stanza as a list, renumbering as it goes.
+
+**Fix**: `escape_leading_number()` writes `1\. ` in verse lines only. The
+escape is invisible when rendered, and the underlying text is unchanged.
+
+---
+
+### BUG-007 — Whole headings arrived wrapped in `**`
+
+**Symptom**: `### **HAGIOGRAPHY AND HISTORY**` — the 2017 ebook bolds or
+italicises entire headings for print styling, and `inline_text()` faithfully
+carried that into the Markdown heading.
+
+**Fix**: headings go through `heading_text()` (plain `get_text()`); the legacy
+template strips `*` from heading text for the same reason.
+
+---
+
+### DD-011 — Tables rendered as Markdown tables
+
+The abbreviation lists in both books are HTML tables, and an element scan over
+`p`/`h*` alone silently dropped them (425 characters in Finding Rest's
+bibliography). `render_table()` now emits them as Markdown tables and the scan
+skips elements inside a `table`. Any new converter that walks a fixed tag list
+should check for `table`, `li` and `td` content before trusting a coverage
+count.
