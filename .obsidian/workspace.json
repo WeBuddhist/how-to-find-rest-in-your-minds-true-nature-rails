@@ -207,8 +207,10 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "f45eff0d6736f932",
+  "active": "eb2538ea3fa47051",
   "lastOpenFiles": [
+    "0-INBOX/raw-data/Finding rest in the nature of the mind _ Trilogy of Rest, -- Longchenpa  (Author) -- 1, 20171205 -- Shambhala Publications, Incorporated -- isbn13 9780834841161 -- f287d91eb0ca522c420f0ea9d72c570e -- Anna’s Arch.epub",
+    "0-INBOX/raw-data/Khenpo Ngawang Pelzang, Padmakara Translation Group - A Guide to the Words of My Perfect Teacher-Shambhala (2004).epub",
     "4-SYSTEM/Skills/epub-to-markdown/converters/she-sg.py",
     "1-SOURCES/Commentaries/bo-zhechen-gyaltsap-yid-bzhin-mdzod-theg-dgu.md",
     "1-SOURCES/Commentaries/bo-zhechen-gyaltsap-ngondro-khrid-yig.md",
@@ -242,8 +244,6 @@
     "0-INBOX/raw-data/ཏཏ",
     "0-INBOX/raw-data/UTMW1PD100944_108B2E_I1PD106623_bo,sa,zh.txt",
     "0-INBOX/raw-data/UTMW1PD100944_86E53A_I1PD106623_bo,sa,zh.txt",
-    "0-INBOX/raw-data/transfer_line.py",
-    "0-INBOX/raw-data/test.py",
-    "0-INBOX/raw-data/segmented_tsawa.txt"
+    "0-INBOX/raw-data/transfer_line.py"
   ]
 }
