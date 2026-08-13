@@ -18,6 +18,8 @@ whenever you discover a new pattern, fix a bug, or make a design decision.
 | `chapter-subchapter-body.py` | Structural fallback: Chapter/Sub-Chapter/Body, no colour coding | Stable |
 | `she-sg.py` | SHE-SG series (Fourth Zhechen Gyaltsap) | Stable |
 | `shambhala.py` | Shambhala Publications English trade ebooks (2 templates) | Stable |
+| `siddharthas-intent.py` | Siddhartha's Intent (Sigil exports) | Stable |
+| `mobi7-flat.py` | **.mobi** intake: flattened MOBI7 HTML + NCX, any publisher | Stable |
 
 Supporting scripts (in parent directory):
 
@@ -634,3 +636,97 @@ bibliography). `render_table()` now emits them as Markdown tables and the scan
 skips elements inside a `table`. Any new converter that walks a fixed tag list
 should check for `table`, `li` and `td` content before trusting a coverage
 count.
+
+---
+
+### Siddhartha's Intent — `siddharthas-intent.py`
+
+**Source**: *Poison is Medicine — Clarifying the Vajrayana*, Dzongsar Jamyang
+Khyentse. `publisher_slug` = `siddharthas-intent`. A Sigil export.
+
+| Class / tag | Role |
+|---|---|
+| `h1.booktitlefont`, `h2.sub-booktitlefont` | `#` / `##` title page |
+| `p.chapterTitleHead` + `h3` | merged into one `#` heading ("ONE. Me and My Gurus") |
+| `p.chapterSubTitle` | `##` |
+| `p.quote-inline` | `>` blockquote; a following `p.signature` is attached as `> — attribution` |
+| `p.Tibetan` | plain (Unicode Tibetan lines) |
+| `p.chapter1stparagraph`, unclassed `p` | plain |
+
+Skipped: `cover.xhtml`, `nav.xhtml`. Endnotes kept.
+
+**Output stats (verified)**: 96 headings; alphanumeric chars in = out, exactly.
+
+---
+
+### MOBI intake — `mobi7-flat.py`
+
+**Source**: *Not for Happiness — A Guide to the So-Called Preliminary
+Practises*, Dzongsar Jamyang Khyentse (Shambhala 2012), supplied as `.mobi`.
+
+The first non-epub input in this pipeline. `ebooklib` cannot open a `.mobi`,
+and this is an old MOBI6/7 file with no KF8 part, so unpacking gives a single
+class-less `book.html`: no CSS classes at all, structure surviving only as
+`<font size>` and `<b>`.
+
+**Structure comes from `toc.ncx`, not the markup.** Its navPoints carry
+`filepos` byte offsets matching `<a id="filepos…">` anchors in the HTML, so the
+converter slices the HTML at those anchors and builds headings from the
+navPoint labels and nesting (depth 0 → `#`, depth 1 → `##`). Inside a slice,
+`<font size>` 5 → `###`, 4 → `####`; size ≥ 6 is the chapter title the NCX
+already supplied and is suppressed when it repeats the label.
+
+Requires `pip install mobi`.
+
+**Output stats (verified)**: 24 of 25 NCX sections (the ebook's own Contents is
+skipped), 186 headings, 392 KB. Alphanumeric coverage reconciles exactly once
+two things are accounted for: 415 chars of suppressed duplicate chapter titles,
+and 348 chars of `id="filepos…" />` fragments that a mid-tag slice start makes
+`BeautifulSoup` read as text (they inflate the *source* count, not the output).
+
+---
+
+### BUG-008 — Bare `<tr>` and orphan `<b>` outside any block element
+
+**Symptom**: 1,665 characters missing from *Poison is Medicine* — two numbered
+question lists and ten subheadings.
+
+**Root cause**: malformed Sigil markup. The lists are `<tr><td>` rows with no
+enclosing `<table>`, so `html.parser` leaves bare `tr` elements that a
+`find_all(['p','h*','li','blockquote'])` scan never sees. Separately, ten
+subheadings are `<b>` elements sitting directly in a `<div>` with no paragraph
+wrapper.
+
+**Fix**: scan `tr` (rendering two-cell numeric rows as an ordered list) and
+`b`/`strong` elements with no block ancestor (rendered as `###`).
+
+---
+
+### BUG-009 — UTF-8 decoding silently deleted every accented character
+
+**Symptom**: "Jamgön Kongtrül Lodrö Tayé" came out as "Jamgn Kongtrul Lodr
+Tay", and every curly quote and apostrophe vanished.
+
+**Root cause**: the unpacked MOBI7 HTML is windows-1252, as its own `<meta>`
+charset declares. Reading it with `encoding='utf-8', errors='ignore'` drops
+each undecodable byte silently — no exception, no warning, just missing
+letters.
+
+**Fix**: `read_html()` honours the declared charset and falls back through
+utf-8 → cp1252 → latin-1. Never open an unpacked ebook file with
+`errors='ignore'`; a hard failure is better than silent deletion.
+
+---
+
+### BUG-010 — MOBI7 nests `<blockquote>` inside `<p>`, duplicating verse
+
+**Symptom**: output had 5,394 more characters than the source; verse quotations
+appeared twice.
+
+**Root cause**: MOBI7 wraps `<blockquote>` and `<ul>` inside `<p>`. Skipping
+elements *inside* a blockquote is not enough — the enclosing `<p>` renders the
+same text again via its own children.
+
+**Fix**: skip any `<p>` that contains a block child (`blockquote`, `li`, `ul`,
+`ol`) and let the inner block render itself. Worth checking in every converter:
+a positive coverage delta means duplication, not extra content.
