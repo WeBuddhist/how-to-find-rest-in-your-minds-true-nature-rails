@@ -16,6 +16,7 @@ whenever you discover a new pattern, fix a bug, or make a design decision.
 | `lekphi.py` | LEK-PHI series (Khenpo Kunzang Palden) | Stable |
 | `rdi-ss.py` | RDI-SS series (Rigpe Dorje Institute Tibetan source texts) | Stable |
 | `chapter-subchapter-body.py` | Structural fallback: Chapter/Sub-Chapter/Body, no colour coding | Stable |
+| `she-sg.py` | SHE-SG series (Fourth Zhechen Gyaltsap) | Stable |
 
 Supporting scripts (in parent directory):
 
@@ -507,3 +508,48 @@ promoted labels for this epub were:
 
 - ༼ཚེ་བློས་བཏང་འདི་ཟབ་པ་དང་རྟོགས་དཀའ་བ་བསྟན་པ་ནི།༽
 - ༼༈ བཞི་པ་བཤད་ཉན་དང་ལུང་ཁྲིད་ལ་སོགས་པའི་གཞན་དོན་ལྟར་སྣང་རྣམས་སྤོང་བ་ནི།༽
+
+---
+
+### SHE-SG series — `she-sg.py`
+
+**Source**: SHE-SG-07 (སྔོན་འགྲོའི་ཁྲིད་ཡིག།) and SHE-SG-11
+(ཡིད་བཞིན་མཛོད་དང་ཐེག་དགུ་སེམས་ཉིད་ངལ་གསོ།), Fourth Zhechen Gyaltsap Gyurme Pema
+Namgyal, 2017 digital editions. No publisher field in the OPF; the series is
+identified by spine naming (`SHE-SG-<n>[-<doc>].xhtml`).
+
+Same InDesign CSS family as LEK-PHI and RDI-SS. `she-sg.py` is `rdi-ss.py`'s
+machinery (run-based spans, stanza splitting on `*-First-Line`, nav filtering)
+with a different class map, so fixes to one should be considered for the other.
+
+**Class differences from RDI-SS:**
+
+| Class | Colour | Role | Note |
+|---|---|---|---|
+| `Tibetan-Commentary-{First-Line-,MIddle-Lines-,Last-Line-}` | #282829 | `[[verse\|…]]` | replaces `Tibetan-Commentary-in-Verse_*`; note the `MIddle` typo and trailing hyphens in the source class names |
+| `Tibetan-Root-Text_Tibetan-Commentry-_Tibetan-Commentry-*-Line` | #343233 | `[[verse\|…]]` | nested style; commentary colour despite the `Root-Text` prefix |
+| `Tibetan-Sub-Chapter` | #343233 | `##` H2 | the Sanskrit title lines |
+| `Tibetan-Chapters` | #343233 | `#` H1 | duplicate of `Tibetan-Chapter`, appears as an inline span inside it |
+| `Tibetan-Commentary-Small` | #343233 | plain | brace-delimited editorial insertions |
+| `Tibetan-Commentry-after-chapter`, `Tibetan-Commentary-after-chapter`, `Tibetan-Commentry-first-line-alone`, `Basic-Paragraph`, `Preface-Writer-and-Date`, `Centered-text` | #343233 / #000000 | plain | — |
+| `Credits-Page_ePub-Edition-Line` | #343233 | skip | added to `SKIP_CLASSES` |
+
+No karchak: the printed contents exist only in the epub's nav document.
+
+**Output stats (verified)**:
+
+| | SHE-SG-07 | SHE-SG-11 |
+|---|---|---|
+| `[[toc\|…]]` | 387 | 1,108 |
+| `[[quote\|…]]` | 153 | 161 |
+| `[[verse\|…]]` | 12 | 13 |
+| `[[root\|…]]` | 14 | 0 |
+| Root-marker bold spans | 0 | 11,653 |
+| Tibetan chars in vs out | 672,646 = 672,646 | 811,804 = 811,804 |
+
+**Markers**: SHE-SG-11 carries 45,683 `༷` (U+0F37) root markers — the first
+epub in this vault where `convert_root_markers()` actually fires — plus 252 `༵`
+(U+0F35) name markers, preserved verbatim per DD-008. SHE-SG-07 has none.
+
+**Images**: 2 in SHE-SG-07 and 4 in SHE-SG-11 content documents are not
+extracted (text-only conversion).
